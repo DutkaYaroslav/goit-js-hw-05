@@ -9,9 +9,8 @@ class Car {
 
     static getSpecs(car) {
         console.log(
-            `maxspeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price}`
-
-        )
+            `maxspeed: ${car.maxSpeed}, speed: ${car.speed}, isOn: ${car.isOn}, distance: ${car.distance}, price: ${car.price}`,
+        );
     }
 
     /*
@@ -24,10 +23,7 @@ class Car {
      *  isOn - заведен ли автомобиль, значения true или false. Изначально false
      *  distance - общий киллометраж, изначально 0
      */
-    constructor({
-        price,
-        maxSpeed,
-    }) {
+    constructor({ price, maxSpeed }) {
         this.speed = 0;
         this._price = price;
         this.maxSpeed = maxSpeed;
@@ -44,7 +40,7 @@ class Car {
     }
 
     set price(cost) {
-        return this._price = cost
+        return (this._price = cost);
     }
 
     /*
@@ -61,8 +57,8 @@ class Car {
      * и сбрасывает текущую скорость в 0
      */
     turnOff() {
-        return this.isOn = false;
-        return this.speed = 0;
+        this.isOn = false;
+        this.speed = 0;
     }
 
     /*
@@ -72,7 +68,7 @@ class Car {
      */
     accelerate(value) {
         if (this.speed + value > this.maxSpeed) {
-            this.speed = this.maxSpeed
+            this.speed = this.maxSpeed;
         } else {
             this.speed += value;
         }
@@ -96,18 +92,16 @@ class Car {
      */
     drive(hours) {
         if (!this.isOn) {
-            return this.distance;
+            this.distance;
         } else {
-            return this.distance += this.speed * hours;
-
+            this.distance += this.speed * hours;
         }
     }
 }
 
-
 const mustang = new Car({
     maxSpeed: 200,
-    price: 2000
+    price: 2000,
 });
 
 mustang.turnOn();
