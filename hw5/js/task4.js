@@ -19,18 +19,18 @@ class StringBuilder {
     }
 
     append(str) {
-        return this._value += str
+        this._value += str
     }
 
     prepend(str) {
 
-        return this._value = str + this._value
+        this._value = str + this._value
 
     }
 
 
     pad(str) {
-        return this._value = str + this._value + str
+        this._value = str + this._value + str
     }
 }
 

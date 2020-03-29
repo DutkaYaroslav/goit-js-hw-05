@@ -16,12 +16,12 @@ class Storage {
     }
 
     addItem(item) {
-        return this.items.push(item);
+        this.items.push(item);
     }
 
     removeItem(item) {
         const itemIndex = this.items.indexOf(item);
-        return this.items.splice(itemIndex, 1);
+        this.items.splice(itemIndex, 1);
     }
 }
 

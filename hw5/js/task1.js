@@ -5,10 +5,6 @@ const Account = function ({
     this.login = login;
     this.email = email;
 
-    // this.getInfo = function () {
-    //     console.log(`login: ${login} Email: ${this.email}`)
-
-    // }
 }
 
 Account.prototype.getInfo = function () {
